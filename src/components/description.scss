@@ -1,0 +1,39 @@
+.section_desc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--section-overlay);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+
+    .desc_card-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+
+      small {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+
+
+}
+@media screen and (max-width:1024px) {
+    .section_desc {
+        grid-template-columns:1fr 1fr;}
+  }

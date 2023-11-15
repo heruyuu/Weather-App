@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --bg-overlay: rgba(0, 0, 0, 0.3);
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-overlay);
+  }
+
+  .container {
+    max-width: 898px;
+    margin: auto;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+
+    .section {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 0.4rem;
+      -webkit-border-radius: 0.4rem;
+      -moz-border-radius: 0.4rem;
+      -ms-border-radius: 0.4rem;
+      -o-border-radius: 0.4rem;
+      color: white;
+    }
+    .section_inputs,
+    .section_temp {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--section-overlay);
+
+      input {
+        width: 46%;
+        padding: 0.5rem;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+        color: white;
+        font-size: 16px;
+        background-color: transparent;
+        border: 1.8px solid rgb(184, 182, 182);
+
+        @media screen and (max-width:768px) {
+         width: 100%;
+        }
+      
+
+      }
+      button {
+        padding: 0.5rem 2.5rem;
+        background-color: white;
+        border-radius: 0.4rem;
+        font-weight: 600;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+
+      .icon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .temperature{
+        font-size: 25px;
+      }
+    }
+  }
+}
